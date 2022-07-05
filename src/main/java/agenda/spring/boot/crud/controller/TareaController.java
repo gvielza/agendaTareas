@@ -12,11 +12,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import agenda.spring.boot.crud.entity.Tarea;
 import agenda.spring.boot.crud.repository.RepoTarea;
 
-@Controller
+@RestController
 @RequestMapping("/api")
 public class TareaController {
 	@Autowired
