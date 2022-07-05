@@ -14,12 +14,14 @@ public class Tarea {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
 	private String nombre;
-	private String descripcion;
-	public Tarea(Integer id, String nombre, String descripcion) {
+	private Boolean realizado;
+	
+	public Tarea(Integer id, String nombre,Boolean realizado) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
-		this.descripcion = descripcion;
+		this.realizado=realizado;
+		
 	}
 	
 	public Tarea() {
@@ -37,16 +39,19 @@ public class Tarea {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public String getDescripcion() {
-		return descripcion;
-	}
-	public void setDescripcion(String descripcion) {
-		this.descripcion = descripcion;
-	}
+	
 
-	public Tarea(String nombre, String descripcion) {
+	public Tarea(String nombre, Boolean realizado) {
 		super();
 		this.nombre = nombre;
-		this.descripcion = descripcion;
+		this.realizado = realizado;
+	}
+
+	public Boolean getRealizado() {
+		return realizado;
+	}
+
+	public void setRealizado(Boolean realizado) {
+		this.realizado = realizado;
 	}
 }
